@@ -6,7 +6,7 @@ usuario:string;
 nombre:string;
 clave:string;
 tema:Tema[];
-examen:Examen[];
+examen:string;
 
 
 

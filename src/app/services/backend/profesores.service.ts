@@ -4,12 +4,13 @@ import * as firebase from 'firebase/app';
 import 'firebase/storage';
 import{Profesores} from '../../interfaces/profesores';
 import { from } from 'rxjs';
+import { Cursos } from 'src/app/interfaces/cursos';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ProfesoresService {
-  listados: AngularFireList<any>
+  listadoscurso: AngularFireList<Cursos>
 
   constructor(private fireBase: AngularFireDatabase) { 
 
@@ -17,15 +18,17 @@ export class ProfesoresService {
 
   }
   listados() {
-    return this.listados = this.fireBase.list('usuario');
+    return this.listadoscurso = this.fireBase.list('curso');
   }
-  nuevoChat(obj :Profesores) {
-    this.listChat.push({
-      Responsable1: obj.Responsable1,
-      Responsable1Foto: obj.Responsable1Foto,
-      Responsable2Foto: obj.Responsable2Foto,
-      Responsable2: obj.Responsable2,
-      mensajes: [{ mensaje: obj.mensaje, quien: obj.quien, para: obj.para, visto: obj.visto, }]
+  nuevocurso(obj :Cursos) {
+    this.listadoscurso.push({
+      usuario:obj.usuario,
+      nombre:obj.nombre,
+      clave:obj.clave,
+      tema:obj.tema,
+      examen:obj.examen,
+
+     
     });
   }
 

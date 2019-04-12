@@ -2,26 +2,8 @@
   <div class="col-3  bg-info left">
     <h3 class="text-white py-3 text-center">Mis cursos</h3>
     <div class="listado">
-      <p>hola</p>
-      <p>hola</p>
-      <p>hola</p>
-      <p>hola</p>
-      <p>hola</p>
-      <p>hola</p>
-      <p>hola</p>
-      <p>hola</p>  <p>hola</p>
-      <p>hola</p>
-      <p>hola</p>
-      <p>hola</p>  <p>hola</p>
-      <p>hola</p>
-      <p>hola</p>
-      <p>hola</p>  <p>hola</p>
-      <p>hola</p>
-      <p>hola</p>
-      <p>hola</p>  <p>hola</p>
-      <p>hola</p>
-      <p>hola</p>
-      <p>hola</p>
+      <p *ngFor="let x of listadocursos">{{x.nombre}}</p>
+ 
     </div>
     <button>
       Nuevo curso

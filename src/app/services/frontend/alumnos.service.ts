@@ -29,7 +29,7 @@ export class ProfesoresService {
     });
   }
 
-  UpdateChat(obj) {
+ /* UpdateChat(obj) {
     this.listChat.update(obj.$key, {
       Responsable1: obj.Responsable1,
       Responsable2: obj.Responsable2,
@@ -37,6 +37,6 @@ export class ProfesoresService {
       Responsable2Foto: obj.Responsable2Foto,
       mensajes: obj.mensajes
     }); 
-  }
+  }*/
 
 }

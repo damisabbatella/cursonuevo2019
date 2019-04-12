@@ -5,10 +5,10 @@
         <h2>Nuevo curso</h2>
       </div>
       <div class="col-12 my-2 text-center">
-        <input type="text" class="w100" placeholder="Nombre del curso">
+        <input type="text" class="w100" placeholder="Nombre del curso" name="nombrecurso" [(ngModel)]="curso.nombre" >
       </div>
       <div class="col-12 my-2 text-center">
-        <input type="text" class="w100" placeholder="Clave del curso">
+        <input type="text" class="w100" placeholder="Clave del curso" name="clavecurso" [(ngModel)]="curso.clave"  >
       </div>
       <div class="col-12 my-2 text-center">
         <input type="text" class="w100" placeholder="Nombre del curso">
@@ -51,7 +51,7 @@
         </div>
       </div>
       <div class="col-12 mt-5 text-center">
-        <button>Crear curso</button>
+        <button (click)="addCurso()">Crear curso</button>
       </div>
     </div>
   </div>
