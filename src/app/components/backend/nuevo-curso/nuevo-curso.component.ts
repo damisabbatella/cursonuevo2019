@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Tema } from 'src/app/interfaces/tema';
 
 @Component({
   selector: 'app-nuevo-curso',
@@ -7,9 +8,27 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NuevoCursoComponent implements OnInit {
 
-  constructor() { }
+  newTema : boolean; //Mostrar listado o no mostrar.
+  TemaAdd : Tema; //Objeto para los Input.
+  Temas : Tema[]; //Array para subir a firebase.
 
-  ngOnInit() {
+  constructor() {
+    this.newTema = false;
+    this.Temas = [];
+    this.TemaAdd = null;
   }
 
+  ngOnInit() {
+    //Objeto vacio para llenar con los Inputs
+    this.TemaAdd = {
+      nombre:null,
+      descripcion:null,
+      propuesta:null,
+      whatsapp:null
+    };
+  }
+
+  addTema(){
+    this.Temas.push(this.TemaAdd);
+  }
 }

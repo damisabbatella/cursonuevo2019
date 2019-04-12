@@ -1,3 +1,58 @@
-<p>
-  nuevo-curso works!
-</p>
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col-12 text-center mt-2">
+        <h2>Nuevo curso</h2>
+      </div>
+      <div class="col-12 my-2 text-center">
+        <input type="text" class="w100" placeholder="Nombre del curso">
+      </div>
+      <div class="col-12 my-2 text-center">
+        <input type="text" class="w100" placeholder="Clave del curso">
+      </div>
+      <div class="col-12 my-2 text-center">
+        <input type="text" class="w100" placeholder="Nombre del curso">
+      </div>
+      <div class="col-12" *ngFor="let x of Temas">
+        <div class="w100">
+          <b>{{x.nombre}}</b>
+        </div>
+      </div>
+      <div class="col-12 my-2 d-flex " *ngIf="!newTema">
+        <div class="ml-auto " style="width: 32%;">
+
+          <button class="ml-auto " (click)="newTema = true">Nuevo tema</button>
+        </div>
+      </div>
+      <div class="col-12 my-2 d-flex " *ngIf="newTema">
+        <div class="ml-auto " style="width: 32%;">
+          <button class="ml-auto " (click)="newTema = false">Cerrar</button>
+        </div>
+      </div>
+      <div class="col-12 mt-5 d-flex" *ngIf="newTema">
+        <div class="mx-auto my-auto w100">
+          <div class="row">
+            <div class="col-12 my-2">
+              <input type="text" style="width:100%" placeholder="Nombre del tema" name="sd" [(ngModel)]="TemaAdd.nombre">
+            </div>
+            <div class="col-12 my-2">
+              <input type="text" style="width:100%" placeholder="Descripción" [(ngModel)]="TemaAdd.descripcion">
+            </div>
+            <div class="col-12 my-2">
+              <input type="text" style="width:100%" placeholder="Propuesta" [(ngModel)]="TemaAdd.propuesta">
+            </div>
+            <div class="col-12 my-2">
+              <input type="text" style="width:100%" placeholder="WhatsApp" [(ngModel)]="TemaAdd.whatsapp">
+            </div>
+            <div class="col-12 my-1">
+              <button (click)="addTema()">Guardar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 mt-5 text-center">
+        <button>Crear curso</button>
+      </div>
+    </div>
+  </div>
+</section>
