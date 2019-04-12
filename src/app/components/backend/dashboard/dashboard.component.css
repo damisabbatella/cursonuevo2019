@@ -1,0 +1,28 @@
+.left{
+    background-image: linear-gradient(to right, blue, #0086ffd9);
+    height: 100vh;
+}
+.listado{
+    height: 80vh;
+    overflow: auto;
+}
+h3{
+    height: 6vh;
+}
+.listado p{
+    color: white;
+    text-align: center;
+    background: #00000024;
+    padding: 10px;
+    border-radius: 5px;
+}
+button{
+    padding: 10px;
+    font-size: 18px;
+    width: 100%;
+    margin-top: 2vh;
+    background: white;
+    border: 0px solid;
+    border-radius: 5px;
+    box-shadow: 0px 1px 1px 1px #474747;
+}
